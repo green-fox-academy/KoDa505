@@ -20,7 +20,7 @@ h1  {
 }
 
 header {
-  background-image: url(../img/wawes.JPG);
+  background-image: url(../img/erdo.JPG);
   background-position: center center;
   background-size: cover;
   color: white;
@@ -28,4 +28,8 @@ header {
   padding-left: 20px;
   padding-right: 100px;
   padding-top: 100px;
+}
+
+.education {
+  text-align: center;
 }
