@@ -1,9 +1,16 @@
 body  {
-  background-color: #f2e6d9;
-  color: #9b6131;
-  font-family: 'Josefin Sans', sans-serif;
+  background-color: #f2e5d9;
+  color: #4c4c33;
+  font-family: 'Abril Fatface', sans-serif;
   line-height: 1.5;
   text-align: justify;
+  margin: 0 auto;
+}
+
+img {
+  height:50px;
+  width: 100%;
+  margin-top: 0;
 }
 
 h1  {
@@ -11,9 +18,37 @@ h1  {
   text-align: center;
 }
 
-img {
+h2 {
+  text-align: center;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.erdo  {
   height:500px;
   width: 100%;
+  margin-bottom: 0;
+  display: block;
+}
+
+.wrap {
+  max-width: 40em;
+  margin: 0  auto;
 }
 
 .name {
@@ -23,8 +58,8 @@ img {
   margin-bottom: 0;
   text-align: right;
   text-transform: uppercase;
-
 }
+
 .address {
   font-style: italic;
   text-align: right;
@@ -36,21 +71,9 @@ img {
   text-align: center;
 }
 
-h2 {
-  font-family:  serif;
-  font-size: 1.4em;
-  text-align: center;
-  text-transform: uppercase;
+.jobs {
+  display: block;
 }
-
-h3 {
-  color: #9b6131;
-}
-
-h4 {
-  margin-bottom: 0;
-}
-
 
 .time {
   font-style: italic;
@@ -58,15 +81,35 @@ h4 {
   margin-top: 0
 }
 
-
 .accomplish li {
   display: list-item;
   padding-left: 20px;
 }
 
-.wrap {
-  max-width: 40em;
-  margin: 0  auto;
+.gombok {
+  background-color: #4c4c33;
+  background-position: center center;
+  color: #f2e5d9;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  width: 120px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 20px auto;
+}
+
+.education p {
+  display: block;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0x;
+}
+
+.education li {
+  list-style: none;
 }
 
 .certificate {
@@ -75,8 +118,6 @@ h4 {
   margin-bottom: auto;
 }
 
-.education p {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 0x;
+.languages li {
+  list-style: none;
 }
