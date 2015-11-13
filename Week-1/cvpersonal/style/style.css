@@ -1,12 +1,67 @@
 body  {
-  color: #333;
+  background-color: #f2e6d9;
+  color: #9b6131;
   font-family: 'Josefin Sans', sans-serif;
   line-height: 1.5;
+  text-align: justify;
 }
 
 h1  {
   font-family: 'Abril Fatface', serif;
   text-align: center;
+}
+
+img {
+  height:500px;
+  width: 100%;
+}
+
+.name {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.7em;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-align: right;
+  text-transform: uppercase;
+
+}
+.address {
+  font-style: italic;
+  text-align: right;
+  margin-top: 0;
+}
+
+.skills {
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-family:  serif;
+  font-size: 1.4em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #9b6131;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+
+.time {
+  font-style: italic;
+  font-size: 0.8em;
+  margin-top: 0
+}
+
+
+.accomplish li {
+  display: list-item;
+  padding-left: 20px;
 }
 
 .wrap {
@@ -16,20 +71,12 @@ h1  {
 
 .certificate {
   font-weight: bold;
-  color: #996633;
+  margin-top: 10px;
+  margin-bottom: auto;
 }
 
-header {
-  background-image: url(../img/erdo.JPG);
-  background-position: center center;
-  background-size: cover;
-  color: white;
-  padding-bottom: 100px;
-  padding-left: 20px;
-  padding-right: 100px;
-  padding-top: 100px;
-}
-
-.education {
+.education p {
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0x;
 }
