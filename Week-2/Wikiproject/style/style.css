@@ -1,0 +1,100 @@
+html body {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-container {
+  background: yellow;
+  order: 1;
+  width: 100%;
+}
+
+.main-header {
+  background: purple;
+  height: 80px;
+  position: relative;
+}
+
+.main-header ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-header li {
+  list-style: none;
+}
+
+.main-header nav, .searchblank {
+  position: absolute;
+}
+
+.user-menu {
+  top: 0;
+  right : 0;
+}
+
+.talk-menu {
+  bottom: 0;
+  left: 0;
+}
+
+.searchblank {
+  right: 0;
+  bottom: 0;
+}
+
+.searchblank input {
+  width: 300px;
+}
+
+.edit-menu {
+  position: absolute;
+  bottom: 0;
+  right: 300px;
+}
+
+
+.biography, .in-action, .apollocode, .at-Nasa {
+  background: #f9f9f9;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  float: right;
+  width: 271px;
+  margin: 6px 0 12px 12px;
+  padding: 25px;
+}
+
+
+.biography {
+  background: #f9f9f9;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  float: right;
+  width: 271px;
+  margin: 6px 0 12px 12px;
+  padding: 25px;
+}
+
+.in-action {
+}
+.apollocode
+
+.at-Nasa
+
+
+.main-footer {
+  background: silver;
+  height: 150px;
+}
+
+.main-sidebar {
+  background: #f9f9f9;
+  order: 0;
+  width: 176px;
+}
