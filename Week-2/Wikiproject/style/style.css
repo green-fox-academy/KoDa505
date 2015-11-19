@@ -3,27 +3,63 @@ html body {
 }
 
 body {
-  margin: 0;
+  background: linear-gradient(to bottom, #fff 50px, #f6f6f6 150px);
+  font-family: sans-serif;
   display: flex;
+  margin: 0;
   min-height: 100vh;
 }
 
+h1,
+h2 {
+  border-bottom: 1px solid #aaa;
+  font-family: serif;
+  font-weight: normal;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1{
+  font-size: 28.8px;
+}
+
+a {
+  color: rgb(6, 69, 173);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #0b0080;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+   -webkit-appearance: none;
+}
+
 .main-container {
-  background: yellow;
   order: 1;
   width: 100%;
 }
 
 .main-header {
-  background: purple;
+  font-size: 13px;
   height: 80px;
   position: relative;
 }
 
 .main-header ul {
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
 .main-header li {
@@ -35,8 +71,19 @@ body {
 }
 
 .user-menu {
+  right : 10px;
   top: 0;
-  right : 0;
+}
+
+.user-menu a {
+  display: block;
+  padding: 10px 5px;
+}
+
+.user-status {
+  background: url(https://en.wikipedia.org/static/1.27.0-wmf.6/skins/Vector/images/user-icon.png?9e7ea) no-repeat 5px center;
+  color: grey;
+  padding: 10px 5px 10px 20px;
 }
 
 .talk-menu {
@@ -44,19 +91,103 @@ body {
   left: 0;
 }
 
-.searchblank {
-  right: 0;
-  bottom: 0;
-}
-
-.searchblank input {
-  width: 300px;
-}
-
 .edit-menu {
   position: absolute;
   bottom: 0;
   right: 300px;
+}
+
+.tab {
+  background: linear-gradient(to bottom, #fff 0%, #a7d7f9 100%);
+  padding-left: 1px;
+}
+
+.tab li {
+  padding-right: 1px;
+}
+
+.tab a {
+  background: linear-gradient(to bottom, #fff 0%, #E8F2F8 100%);
+  bottom: -1px;
+  display: block;
+  padding: 15px 5px 5px 5px;
+  position: relative;
+}
+
+.tab a:visited {
+  color: rgb(6, 69, 173)
+}
+
+.active-tab a {
+  background: #fff;
+  border-bottom: 1px solid white;
+}
+
+.searchblank {
+  right: 10px;
+  bottom: 0;
+  padding-bottom: 5px;
+}
+
+.searchblank input[type="search"] {
+  width: 280px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 5px 5px 5px 10px;
+  background: url(https://en.wikipedia.org/static/1.27.0-wmf.6/skins/Vector/images/search-ltr.png?511c1) no-repeat calc(100% - 5px) 50%, linear-gradient(to top, #fff 50%, #E8F2F8 100%);
+}
+
+.searchblank input[type="submit"] {
+  background: transparent;
+  border: 0;
+  bottom: 0;
+  cursor: pointer;
+  height: 24px;
+  position: absolute;
+  right: 0px;
+  width: 25px;
+}
+
+.searchblank input:focus {
+  outline: 0;
+}
+
+
+
+
+::-webkit-input-placeholder {
+  color: grey;
+  font-style: italic;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+::-moz-input-placeholder {
+  color: grey;
+  font-style: italic;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+:-ms-placeholder {
+  color: grey;
+  font-style: italic;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+::placeholder {
+  color: grey;
+  font-style: italic;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.main-content {
+  background: #fff;
+  border: 1px solid #a7d7f9;
+  border-right: 0px;
+  padding: 16px;
 }
 
 
@@ -93,8 +224,17 @@ body {
   height: 150px;
 }
 
+.logo {
+  display: block;
+  width: 135px;
+  height: 155px;
+  background: url(../img/enwiki_logo.png);
+  margin: 6px auto 0;
+  color: rgba(0, 0, 0, 0  );
+}
+
 .main-sidebar {
-  background: #f9f9f9;
   order: 0;
   width: 176px;
+  flex: 0 0 auto;
 }
