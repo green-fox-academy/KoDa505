@@ -5,8 +5,10 @@ def rot13(message):
     for i in message:
         if i in first:
             reversed = reversed + chr(ord(i) + 13)
-        else:
+        elif i in second:
             reversed = reversed + chr(ord(i) - 13)
+        else:
+            reversed = reversed + i
     return reversed
 
-print(rot13("URyyb"))
+print(rot13("URyyb13"))
