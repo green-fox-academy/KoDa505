@@ -1,2 +1,9 @@
 viraglocsolas#todo
-posta#todo
+posta#completed
+Django Girls level#todo
+adobevallas#todo
+felveteli jelentkezes#inprogress
+receptet kivaltani#todo
+repjegyet foglalni#inprogress
+bevasarlas#todo
+mezeskalacs teszta#completed
