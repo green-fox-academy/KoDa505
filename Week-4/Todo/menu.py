@@ -1,14 +1,17 @@
-import todo
-import beolvasas
+import commands
+import store
 
-items = beolvasas.load('todos.txt')
+items = store.load('todos.txt')
 
 menu = [
- '1. what to do this week?',
- '2. add new task',
- '3. complete a task',
- '4. remove a task',
- '5. exit menu'
+ '1. What to do this week?',
+ '2. Add new task',
+ '3. What you have started',
+ '4. Complete a task',
+ '5. What you have done',
+ '6. Remove a task',
+ '7. Exit menu'
+
 ]
 
 while True:
@@ -21,14 +24,18 @@ while True:
         print('You have to enter the number of your choice')
     else:
         if choice == 1:
-            todo.print_todos(items)
+            commands.print_todos(items)
             print('--' *16)
         if choice == 2:
-            todo.new_element(items)
+            commands.new_element(items)
         if choice == 3:
-            todo.complete_task(items)
+            commands.print_in_progress(items)
         if choice == 4:
-            todo.remove_task(items)
+            commands.complete_task(items)
         if choice == 5:
-            beolvasas.save(items, 'todos.txt')
+            commands.print_completed(items)
+        if choice == 6:
+            commands.remove_task(items)
+        if choice == 7:
+            store.save(items, 'todos.txt')
             exit()
