@@ -6,5 +6,7 @@ def is_complete(numbers):
 
 def integer_checking(numbers):
     for i in numbers:
-        if i <=0 or i > 9:
+        if i <=0:
+            return False
+        if i > 9:
             return False
