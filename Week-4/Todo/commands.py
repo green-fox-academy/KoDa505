@@ -1,18 +1,6 @@
-#my_file = open('todos.txt')
-
-#list = my_file.read()
-
-#my_file.close()
-
-#print(list)
-
-
-items = [
-        {'task': 'vegyel tejet', 'state': 'todo'},
-        {'task': 'takarits', 'state': 'todo'},
-        {'task': 'fizesd be a szamlat', 'state': 'completed'},
-    ]
-
+import datetime
+import dtimes
+import time
 
 def print_todos(items):
     for i in items:
@@ -22,7 +10,8 @@ def print_todos(items):
 
 def new_element(items):
     addition = input('Enter the new task: ')
-    items.append({'task': addition, 'state': 'todo'})
+    duedate = dtimes.duedate()
+    items.append({'task': addition, 'state': 'todo', 'duedate': duedate})
 
 def print_completed(items):
     for i in items:
@@ -66,10 +55,38 @@ def remove_task(items):
     index = int(input('Enter the number of the task that you want to remove: ')) -1
     items.pop(index)
 
-
 donelist = []
 def print_donelist(items):
     for i in items:
         if i['state'] == 'completed':
             donelist.append(i['task'])
     print(donelist)
+
+
+
+def remaining_time(items):
+    j = 1
+    for i in items:
+        print(str(j) + '. ' + i['task'])
+        j += 1
+    index = int(input('Enter the number of the task ')) -1
+    duedatestring = items[index]['duedate']
+    duedate = datetime.datetime.strptime(duedatestring, '%Y-%m-%d %H:%M:%S')
+    start = datetime.datetime.today()
+    delta = duedate-start
+    print("---"* 10)
+    print(delta)
+    print("---" * 10)
+
+
+def expiring(items):
+    for item in items:
+        duedatestring = item['duedate']
+        duedate = datetime.datetime.strptime(duedatestring, '%Y-%m-%d %H:%M:%S')
+        start = datetime.datetime.today()
+        delta = duedate-start
+        if start > duedate:
+            print("! ! ! " * 10)
+            print(item['task'] + ' ' + item['duedate'])
+            print("laziness alarm!  " * 3)
+            print("! ! ! " * 10)

@@ -1,9 +1,3 @@
-viraglocsolas#todo
-posta#completed
-Django Girls level#todo
-adobevallas#todo
-felveteli jelentkezes#inprogress
-receptet kivaltani#todo
-repjegyet foglalni#inprogress
-bevasarlas#todo
-mezeskalacs teszta#completed
+szerelo#todo#2015-12-12 12:00:00
+viraglocsolas#completed#2015-12-21 14:00:00
+viraglocsolas#completed#2015-11-21 14:00:00
