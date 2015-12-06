@@ -45,3 +45,7 @@ while True:
         if choice == 9:
             store.save(items, 'todos.txt')
             exit()
+        if choice == 10:
+            for item in items:
+                print(item)
+            

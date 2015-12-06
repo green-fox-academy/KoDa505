@@ -1,3 +1,4 @@
 szerelo#todo#2015-12-12 12:00:00
-viraglocsolas#completed#2015-12-21 14:00:00
 viraglocsolas#completed#2015-11-21 14:00:00
+posta#todo#2015-12-21 12:30:00
+leveliras#completed#2015-12-25 18:00:00

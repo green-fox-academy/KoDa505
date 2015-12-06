@@ -69,12 +69,10 @@ def remaining_time(items):
     for i in items:
         print(str(j) + '. ' + i['task'])
         j += 1
-    index = int(input('Enter the number of the task ')) -1
+    index = int(input('Enter the number of the task: ')) -1
     duedatestring = items[index]['duedate']
     duedate = datetime.datetime.strptime(duedatestring, '%Y-%m-%d %H:%M:%S')
-    start = datetime.datetime.today()
-    delta = duedate-start
-    print("---"* 10)
+    print("---" * 10)
     print(delta)
     print("---" * 10)
 
