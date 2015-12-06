@@ -95,6 +95,8 @@ def remaining_time(items):
     index = int(input('Enter the number of the task: ')) -1
     duedatestring = items[index]['duedate']
     duedate = datetime.datetime.strptime(duedatestring, '%Y-%m-%d %H:%M:%S')
+    start = datetime.datetime.today()
+    delta = duedate-start
     print("---" * 10)
     print(delta)
     print("---" * 10)
@@ -106,7 +108,6 @@ def expiring(items):
             duedatestring = item['duedate']
             duedate = datetime.datetime.strptime(duedatestring, '%Y-%m-%d %H:%M:%S')
             start = datetime.datetime.today()
-            delta = duedate-start
             if start > duedate:
                 print("! ! ! " * 10)
                 print(item['task'] + ' ' + item['duedate'])

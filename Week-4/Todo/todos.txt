@@ -6,3 +6,6 @@ Beatles#inprogress#2015-12-23 20:00:00
 Rolling Stones#completed#2016-01-12 19:00:00
 The Cure#todo#2015-12-07 21:21:00
 Motley Crue #inprogress#2015-12-27 09:00:00
+fejvakaras#inprogress#2015-12-07 11:00:00
+a lejart feladat#todo#2012-12-12 12:00:00
+szamlak befizetese#todo#2012-12-13 14:16:00
