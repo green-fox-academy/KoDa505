@@ -1,4 +1,8 @@
 szerelo#todo#2015-12-12 12:00:00
 viraglocsolas#completed#2015-11-21 14:00:00
-posta#todo#2015-12-21 12:30:00
+posta#inprogress#2015-12-21 12:30:00
 leveliras#completed#2015-12-25 18:00:00
+Beatles#inprogress#2015-12-23 20:00:00
+Rolling Stones#completed#2016-01-12 19:00:00
+The Cure#todo#2015-12-07 21:21:00
+Motley Crue #inprogress#2015-12-27 09:00:00

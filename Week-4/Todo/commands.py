@@ -24,16 +24,24 @@ def print_in_progress(items):
             print(i['task'])
 
 
-def order_todos(items):
+def order_todos_and_inprogresses(items):
     orderedtodo = []
     for i in items:
         if i['state'] == 'todo' or i['state'] == 'inprogress':
             orderedtodo.append(i['task'])
     return orderedtodo
 
+def order_todos(items):
+    orderedtodo = []
+    for i in items:
+        if i['state'] == 'todo':
+            orderedtodo.append(i['task'])
+    return orderedtodo
+
+
 
 def complete_task(items):
-    orderedtodo = order_todos(items)
+    orderedtodo = order_todos_and_inprogresses(items)
     print('Which task did you complete?')
     print('0. Back')
     j = 1
@@ -46,6 +54,21 @@ def complete_task(items):
     for task in items:
         if task['task'] == orderedtodo[index]:
             task['state'] = 'completed'
+
+def make_task_inprogress(items):
+    orderedtodo = order_todos(items)
+    print('Which task have you started?')
+    print('0. Back')
+    j = 1
+    for i in orderedtodo:
+        print(str(j) + '. ' + i)
+        j += 1
+    index = int(input('Enter the number of the task that you have started: ')) -1
+    if index == -1:
+        print('Back to main menu')
+    for task in items:
+        if task['task'] == orderedtodo[index]:
+            task['state'] = 'inprogress'
 
 def remove_task(items):
     j = 1
@@ -79,12 +102,13 @@ def remaining_time(items):
 
 def expiring(items):
     for item in items:
-        duedatestring = item['duedate']
-        duedate = datetime.datetime.strptime(duedatestring, '%Y-%m-%d %H:%M:%S')
-        start = datetime.datetime.today()
-        delta = duedate-start
-        if start > duedate:
-            print("! ! ! " * 10)
-            print(item['task'] + ' ' + item['duedate'])
-            print("laziness alarm!  " * 3)
-            print("! ! ! " * 10)
+        if item['state'] == 'todo' or item['state'] == 'inprogress':
+            duedatestring = item['duedate']
+            duedate = datetime.datetime.strptime(duedatestring, '%Y-%m-%d %H:%M:%S')
+            start = datetime.datetime.today()
+            delta = duedate-start
+            if start > duedate:
+                print("! ! ! " * 10)
+                print(item['task'] + ' ' + item['duedate'])
+                print("laziness alarm!  " * 3)
+                print("! ! ! " * 10)

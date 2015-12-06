@@ -6,13 +6,15 @@ items = store.load('todos.txt')
 menu = [
  '1. What you have to do this week',
  '2. Add new task',
- '3. What you have started',
+ '3. Task already in progress',
  '4. How much time do you have?',
  '5. How lazy were you?',
  '6. Complete a task',
  '7. What you have done',
  '8. Remove a task',
- '9. Exit menu'
+ '9. Show all the tasks',
+ '10. Switch a task to "in progress" state',
+ '11. Exit menu '
 ]
 
 while True:
@@ -43,9 +45,10 @@ while True:
         if choice == 8:
             commands.remove_task(items)
         if choice == 9:
-            store.save(items, 'todos.txt')
-            exit()
-        if choice == 10:
             for item in items:
                 print(item)
-            
+        if choice == 10:
+            commands.make_task_inprogress(items)
+        if choice == 11:
+            store.save(items, 'todos.txt')
+            exit()
