@@ -1,4 +1,4 @@
-from menu import *
+from basic_elements import *
 import commands_quit_submenu
 
 Name_SubMenu = Menu()

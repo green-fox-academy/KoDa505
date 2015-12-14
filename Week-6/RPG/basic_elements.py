@@ -30,3 +30,12 @@ class MenuItem():
         self.number = number
         self.cmd = cmd
         self.item = [self.number, self.name, self.cmd]
+
+
+class Player:
+    def __init__(self, dexterity, health, luck):
+        self.dext = dexterity
+        self.health = health
+        self.luck = luck
+
+        

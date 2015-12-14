@@ -1,4 +1,4 @@
-from menu import *
+from basic_elements import *
 import commands
 
 MainMenu = Menu()
