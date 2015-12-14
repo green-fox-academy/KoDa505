@@ -33,9 +33,8 @@ class MenuItem():
 
 
 class Player:
-    def __init__(self, dexterity, health, luck):
+    def __init__(self, name, dexterity, health, luck):
+        self.name = name
         self.dext = dexterity
         self.health = health
         self.luck = luck
-
-        
