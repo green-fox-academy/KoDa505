@@ -1,5 +1,5 @@
 import unittest
-from menu import *
+from basic_elements import *
 
 class TestMenu(unittest.TestCase):
     def test_exist(self):
@@ -18,9 +18,10 @@ class TestMenu(unittest.TestCase):
         self.assertEqual(menulist, [[2, "Load game", "cmd"]])
 
     def test_choose(self):
-        menu_item = MenuItem(1, "New game", "cmd")
-        return_cmd = menu_item.chosen([])
-        self.assertEqual(return_cmd, "cmd")
+        def test_func():
+            return True
+        menu_item = MenuItem(1, "New game", test_func)
+        self.assertEqual(menu_item.choose(), "kacsa")
 
 
 unittest.main()

@@ -37,6 +37,7 @@ class Menu():
         print(self.choose_item().name)
 
 
+
 class MenuItem():
     def __init__(self, number, name, cmd):
         self.name = name
@@ -54,5 +55,8 @@ class Player:
     def display(self):
         return {"name": self.name, "health":self.health, "dexterity": self.dexterity, "luck":self.luck}
 
+    def display_print(self):
+        print("{} D: {} H: {} L: {}".format(self.name, self.dexterity, self.health, self.luck))
 
-player1 = Player()        
+
+player1 = Player()
