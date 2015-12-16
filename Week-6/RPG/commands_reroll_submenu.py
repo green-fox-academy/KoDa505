@@ -2,7 +2,7 @@ from basic_elements import *
 import commands
 import commands_name_submenu
 import potion_submenu
-
+import class_Player
 
 
 def reroll():
@@ -16,10 +16,12 @@ def create_reselect():
     Reselect_Potion_SubMenu.add(Menu1)
     Reselect_Potion_SubMenu.add(Menu2)
     Reselect_Potion_SubMenu.add(Menu3)
+    class_Player.player1.display_print()
     Reselect_Potion_SubMenu.printing_menu()
     Reselect_Potion_SubMenu.choose()
 
 def continuing():
+    class_Player.player1.display_print()
     potion_submenu.Potion_SubMenu.printing_menu()
     potion_submenu.Potion_SubMenu.choose_print()
     create_reselect()

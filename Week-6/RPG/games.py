@@ -5,11 +5,13 @@ import reroll_submenu
 import quit_submenu
 import potion_submenu
 
+
+
 class Game:
     def start_game(self):
-        import main_menu
+        main_menu.MainMenu.printing_menu()
+        main_menu.MainMenu.choose()
         return
-
 
 
 
