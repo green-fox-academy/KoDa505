@@ -23,7 +23,7 @@ def create_reselect():
 def continuing():
     class_Player.player1.display_print()
     potion_submenu.Potion_SubMenu.printing_menu()
-    potion_submenu.Potion_SubMenu.choose_print()
+    potion_submenu.Potion_SubMenu.choose()
     create_reselect()
 
 def save():

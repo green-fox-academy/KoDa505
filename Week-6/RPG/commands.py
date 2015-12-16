@@ -11,7 +11,6 @@ class Commands_MainMenu:
 
     def new_game():
         name = input("Enter your name: ")
-        print(name)
         class_Player.player1.name = name
         class_Player.player1.display_print()
         name_submenu.Name_SubMenu.printing_menu()
