@@ -4,6 +4,7 @@ import name_submenu
 import reroll_submenu
 import quit_submenu
 import potion_submenu
+import player
 
 
 
@@ -19,4 +20,4 @@ game1 = Game()
 
 game1.start_game()
 
-basic_elements.player1.display_print()
+player.player1.display_print()
