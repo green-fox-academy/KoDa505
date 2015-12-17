@@ -6,7 +6,7 @@ Reroll_SubMenu = Menu()
 
 
 Menu1 = MenuItem(1, "Reroll stats", commands_reroll_submenu.reroll)
-Menu2 = MenuItem(2, "Continue", commands_reroll_submenu.continuing)
+Menu2 = MenuItem(2, "Continue", commands_reroll_submenu.potion_choosing)
 Menu3 = MenuItem(3, "Save", "save function")
 Menu4 = MenuItem(4, "Quit", commands_reroll_submenu.quitting)
 
