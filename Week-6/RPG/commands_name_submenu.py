@@ -1,5 +1,5 @@
 import commands
-import basic_elements
+import menu_class
 import reroll_submenu
 import player
 

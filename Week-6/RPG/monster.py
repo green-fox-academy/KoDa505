@@ -23,6 +23,12 @@ class Monster:
     def fight_print(self):
         print("\nYour enemy's name: {} \n   Its dexterity: {}\n   Its  health: {}".format(self.name, self.dexterity, self.health))
 
+    def strike(self):
+        d1 = random.randint(1,6)
+        d2 = random.randint(1,6)
+        fight_point = d1 + d2 + self.dexterity
+        return fight_point
+
 
 
 monster = Monster("John", 1, 1)

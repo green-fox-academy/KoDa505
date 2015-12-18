@@ -1,11 +1,13 @@
+from menu_class import Menu
 import player
-import basic_elements
 import name_submenu
 import quit_submenu
 
 
+class MainMenu(Menu):
+    def __init__(self, name):
+        self.name = name
 
-class Commands_MainMenu:
     def exiting():
         exit()
 
@@ -16,7 +18,6 @@ class Commands_MainMenu:
         name_submenu.Name_SubMenu.printing_menu()
         name_submenu.Name_SubMenu.choose()
         return name
-
 
     def save():
         pass

@@ -1,4 +1,4 @@
-from basic_elements import *
+from menu_class import *
 import commands
 import commands_name_submenu
 import potion_submenu

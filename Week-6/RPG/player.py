@@ -48,5 +48,11 @@ class Player:
     def fight_print(self):
         print("\nYour name: {} \n   Your dexterity: {}\n   Your current luck: {}\n   Your max luck: {}\n   Your current health: {}\n   Your max health: {}".format(self.name, self.dexterity, self.luck, self.max_luck, self.health, self.max_health))
 
+    def strike(self):
+        d1 = random.randint(1,6)
+        d2 = random.randint(1,6)
+        fight_point = d1 + d2 + self.dexterity
+        return fight_point        
+
 
 player1 = Player()

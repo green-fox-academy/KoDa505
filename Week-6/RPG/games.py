@@ -1,11 +1,5 @@
 import main_menu
-import basic_elements
-import name_submenu
-import reroll_submenu
-import quit_submenu
-import potion_submenu
-import player
-
+import player   
 
 
 class Game:
