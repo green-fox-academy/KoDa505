@@ -13,6 +13,9 @@ var galleryUrls = [
   'http://wp.streetwise.co/wp-content/uploads//2014/12/Code.jpg',
 ];
 
+var backgroundImg = document.querySelector('.background-img');
+
+
 var forwardgomb = document.querySelector('.forward');
 var backwardgomb = document.querySelector('.backward');
 
@@ -26,6 +29,7 @@ function getNextImage() {
   };
     mainimage.setAttribute('src', galleryUrls[indexOfMainimage+1]);
     indexOfMainimage += 1;
+  backgroundImg.setAttribute('src', galleryUrls[indexOfMainimage]);
 };
 
 function getPrevImage() {
@@ -34,6 +38,7 @@ function getPrevImage() {
   }
     mainimage.setAttribute('src', galleryUrls[indexOfMainimage-1]);
     indexOfMainimage -= 1;
+  backgroundImg.setAttribute('src', galleryUrls[indexOfMainimage]);
 };
 
 var thecontent = document.querySelector('.thecontent');
