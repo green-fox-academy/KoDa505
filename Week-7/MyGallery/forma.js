@@ -74,6 +74,7 @@ for (var i = 0; i < galleryUrls.length; i++) {
 smallImages.addEventListener('click', function() {
   mainimage.setAttribute('src', event.target.currentSrc);
   getIndexofMain(event.target.currentSrc);
+  backgroundImg.setAttribute('src', galleryUrls[indexOfMainimage]);
 });
 
 function getIndexofMain(currentSrc) {
