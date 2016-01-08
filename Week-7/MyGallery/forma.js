@@ -49,13 +49,11 @@ forwardgomb.addEventListener('click', function(){
   getNextImage();
 });
 
-
 backwardgomb.addEventListener('click', function() {
   getPrevImage();
 });
 
 var smallImages = document.querySelector('.thumbnail');
-
 
 function imageCreator(src) {
   var newImage = document.createElement('img');
