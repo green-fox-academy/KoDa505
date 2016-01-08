@@ -65,7 +65,13 @@ header {
   padding: 3px;
 }
 
+
+
 .thumbnail-pics {
   max-height: 50px;
   max-width: 50px;
+}
+
+.thumbnail-pics:hover {
+  opacity: 0.4;
 }
