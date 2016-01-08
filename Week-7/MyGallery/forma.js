@@ -70,7 +70,7 @@ function imageCreator(src) {
 for (var i = 0; i < galleryUrls.length; i++) {
   imageCreator(galleryUrls[i]);
 }
-
+  
 smallImages.addEventListener('click', function() {
   mainimage.setAttribute('src', event.target.currentSrc);
   getIndexofMain(event.target.currentSrc);
