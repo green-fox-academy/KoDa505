@@ -6,10 +6,43 @@ body {
   line-height: 1.6;
   /*display: flex;*/
   margin: 0;
-  min-height: 100vh;
 }
 
+.maincontainer {
+  display: flex;
+  flex-direction: column;
+  max-height: 65vh;
+}
 
+header {
+  padding: 20px;
+  background-color: #666;
+  color:white;
+}
+
+.thecontent {
+  display: flex;
+}
+
+.col-1 {
+  max-width: 600px;
+}
+
+.col-2 {
+  flex-grow: 1;
+}
+
+.col-3 {
+  max-width: 600px;
+}
+
+.main-images {
+  max-width: 1000px;
+  max-height: 60vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .thumbnail {
   display: flex;

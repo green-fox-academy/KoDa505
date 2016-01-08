@@ -6,8 +6,8 @@ console.log(title);
 title.classList.add('piros');
 
 var galleryUrls = [
-  'http://techunofficial.com/wp-content/uploads/2015/01/programming.png',
   'http://aquinashub.co.uk/wp-content/uploads/2015/04/shutterstock_computer_programming.jpg',
+  'http://techunofficial.com/wp-content/uploads/2015/01/programming.png',
   'http://aquinashub.co.uk/wp-content/uploads/2015/10/software-programming.jpg',
   'http://thepinstripedsuit.com/wp-content/uploads/2012/12/programming.jpg',
   'http://www.gigabitware.com/images/slide/programming.png',
@@ -18,7 +18,8 @@ var galleryUrls = [
 var forwardgomb = document.querySelector('.forward');
 var backwardgomb = document.querySelector('.backward');
 
-var mainimage = document.querySelector('.mainimage')
+var mainimage = document.querySelector('.mainimage');
+mainimage.classList.add('main-images');
 var indexOfMainimage = 0;
 
 function getNextImage() {
