@@ -3,8 +3,6 @@
 var title = document.querySelector('.mainTitle');
 console.log(title);
 
-title.classList.add('piros');
-
 var galleryUrls = [
   'http://aquinashub.co.uk/wp-content/uploads/2015/04/shutterstock_computer_programming.jpg',
   'http://techunofficial.com/wp-content/uploads/2015/01/programming.png',
@@ -38,10 +36,19 @@ function getPrevImage() {
     indexOfMainimage -= 1;
 };
 
+var thecontent = document.querySelector('.thecontent');
+thecontent.addEventListener('wheel', function(e) {
+  if (e.deltaY < 0) {
+    getNextImage();
+  } else {
+    getPrevImage();
+  }
+});
 
 forwardgomb.addEventListener('click', function(){
   getNextImage();
 });
+
 
 backwardgomb.addEventListener('click', function() {
   getPrevImage();
