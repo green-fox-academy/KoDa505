@@ -9,9 +9,7 @@
 }
 
 body {
-  /*background: linear-gradient(to bottom, #fff 50px, #f6f6f6 150px);*/
   margin: 0;
-  color: tran
 }
 
 .maincontainer {
@@ -31,23 +29,24 @@ header {
   display: flex;
 }
 
-.col-1 {
-  max-width: 600px;
+.col-1,
+  .col-3 {
+    width: 900px;
+    text-align: center;
 }
 
 .col-2 {
   flex-grow: 1;
 }
 
-.col-3 {
-  max-width: 600px;
-}
-
-/*.backward,
+.backward,
   .forward {
-    margin-top: auto;
-    margin-bottom: auto;
-  }*/
+    background-color: #777;
+    border: 1px solid #aaa;
+    margin-top: 200px;
+    color: white;
+    position: absolute;
+  }
 
 .main-images {
   max-width: 1000px;
