@@ -30,7 +30,7 @@ function getNextImage() {
     mainimage.setAttribute('src', galleryUrls[indexOfMainimage+1]);
     indexOfMainimage += 1;
   backgroundImg.setAttribute('src', galleryUrls[indexOfMainimage]);
-};
+}
 
 function getPrevImage() {
   if (indexOfMainimage-1 === -1) {
@@ -39,7 +39,7 @@ function getPrevImage() {
     mainimage.setAttribute('src', galleryUrls[indexOfMainimage-1]);
     indexOfMainimage -= 1;
   backgroundImg.setAttribute('src', galleryUrls[indexOfMainimage]);
-};
+}
 
 var thecontent = document.querySelector('.thecontent');
 thecontent.addEventListener('wheel', function(e) {
@@ -67,10 +67,19 @@ function imageCreator(src) {
   smallImages.appendChild(newImage);
 }
 
-for (var i = 0; i < galleryUrls.length-1; i++) {
+for (var i = 0; i < galleryUrls.length; i++) {
   imageCreator(galleryUrls[i]);
-};
+}
 
 smallImages.addEventListener('click', function() {
   mainimage.setAttribute('src', event.target.currentSrc);
+  getIndexofMain(event.target.currentSrc);
 });
+
+function getIndexofMain(currentSrc) {
+  for (var i = 0; i <= galleryUrls.length -1; i++) {
+    if (currentSrc === galleryUrls[i]) {
+      indexOfMainimage = i;
+    }
+  }
+}
