@@ -1,7 +1,6 @@
 'use strict';
 
 var title = document.querySelector('.mainTitle');
-console.log(title);
 
 var galleryUrls = [
   'http://aquinashub.co.uk/wp-content/uploads/2015/04/shutterstock_computer_programming.jpg',
@@ -16,15 +15,18 @@ var galleryUrls = [
 var backgroundImg = document.querySelector('.background-img');
 
 
-var forwardgomb = document.querySelector('.forward');
-var backwardgomb = document.querySelector('.backward');
+var forwardButton = document.querySelector('.forward');
+var backwardButton = document.querySelector('.backward');
 
 var mainimage = document.querySelector('.mainimage');
-mainimage.classList.add('main-images');
 var indexOfMainimage = 0;
+var thecontent = document.querySelector('.thecontent');
+var smallImages = document.querySelector('.thumbnail');
+
+mainimage.classList.add('main-images');
 
 function getNextImage() {
-  if (indexOfMainimage+1 === galleryUrls.length) {
+  if (indexOfMainimage + 1 === galleryUrls.length) {
     indexOfMainimage = 0;
   };
     mainimage.setAttribute('src', galleryUrls[indexOfMainimage+1]);
@@ -41,7 +43,6 @@ function getPrevImage() {
   backgroundImg.setAttribute('src', galleryUrls[indexOfMainimage]);
 }
 
-var thecontent = document.querySelector('.thecontent');
 thecontent.addEventListener('wheel', function(e) {
   if (e.deltaY < 0) {
     getNextImage();
@@ -50,15 +51,14 @@ thecontent.addEventListener('wheel', function(e) {
   }
 });
 
-forwardgomb.addEventListener('click', function(){
+forwardButton.addEventListener('click', function(){
   getNextImage();
 });
 
-backwardgomb.addEventListener('click', function() {
+backwardButton.addEventListener('click', function() {
   getPrevImage();
 });
 
-var smallImages = document.querySelector('.thumbnail');
 
 function imageCreator(src) {
   var newImage = document.createElement('img');
@@ -70,7 +70,7 @@ function imageCreator(src) {
 for (var i = 0; i < galleryUrls.length; i++) {
   imageCreator(galleryUrls[i]);
 }
-  
+
 smallImages.addEventListener('click', function() {
   mainimage.setAttribute('src', event.target.currentSrc);
   getIndexofMain(event.target.currentSrc);
