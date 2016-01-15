@@ -2,19 +2,18 @@
 
 var url = 'https://mysterious-dusk-8248.herokuapp.com/todos';
 var todoContainer = document.querySelector('.todo-container');
-
 var todoInput = document.querySelector('.todo-input');
+var todoButton = document.querySelector('.todo-button');
+var deleteButton = document.querySelector('.delete-button');
+var updateButton = document.querySelector('.update-button');
+var elementId = 0;
+var elementText = '';
 
 var listCallback = function (response) {
   var todoArray = JSON.parse(response);
   todoArray.forEach(function(todoItem) {
     var newTodoItem = document.createElement('p');
-    newTodoItem.addEventListener('click', function() {
-      if (document.querySelector('.highlighted') != null) {
-        document.querySelector('.highlighted').classList.remove('highlighted');
-      }
-      newTodoItem.classList.add('highlighted');
-    });
+    highlighter(newTodoItem);
     if (todoItem.completed) {
       newTodoItem.innerHTML = todoItem.text + '    &#10004';
     } else {
@@ -25,12 +24,14 @@ var listCallback = function (response) {
   });
 }
 
-
-var todoButton = document.querySelector('.todo-button');
-var deleteButton = document.querySelector('.delete-button');
-var updateButton = document.querySelector('.update-button');
-var elementId = 0;
-var elementText = '';
+function highlighter(element) {
+  element.addEventListener('click', function() {
+    if (document.querySelector('.highlighted') != null) {
+      document.querySelector('.highlighted').classList.remove('highlighted');
+    }
+    element.classList.add('highlighted');
+  });
+}
 
 var refresh = function() {
   todoContainer.innerText = '';
@@ -42,12 +43,11 @@ var createTodoCallback = function(response) {
 }
 
 todoButton.addEventListener('click', function() {
-  var newTodo = JSON.stringify({text: todoInput.value, completed: false});
+  var todoEntered = todoInput.value;
+  var newTodo = JSON.stringify({text: todoEntered, completed: false});
   createRequest('POST', url, newTodo, createTodoCallback);
   todoInput.value = '';
 });
-
-
 
 function deleteTodo (id) {
   createRequest('DELETE', url + '/' + id, undefined, refresh);
@@ -56,7 +56,6 @@ function deleteTodo (id) {
 function setStatus(id) {
   createRequest('PUT', url + '/' + id, JSON.stringify({text: elementText, completed: true}), refresh);
 }
-
 
 todoContainer.addEventListener('click', function(event) {
   console.log(event.target.id);
