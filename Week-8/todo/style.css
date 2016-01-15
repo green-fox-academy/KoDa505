@@ -1,0 +1,14 @@
+
+body {
+  background-color:  #d9b38c;
+  text-align: center;
+}
+.todo-container p:active {
+  background-color: #130d06;
+}
+
+.highlighted {
+  background-color: #4d3319;
+  color: white;
+
+}
