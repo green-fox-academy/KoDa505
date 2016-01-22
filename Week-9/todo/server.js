@@ -36,11 +36,10 @@ app.get("/todos", function (req, res) {
 // DELETE /todos/1 => remove a todo item
 // It deletes and returns a todo item.
 app.delete("/todos/:id", function (req, res) {
-  findItem(req, res, function (item) {
-    items.remove(item.id);
-    item.destroyed = true;
-    res.json(item);
+  items.remove(req.params.id, function(result) {
+    res.json(result);
   });
+
 });
 
 // POST /todos => create a new todo item

@@ -25,10 +25,10 @@ function addItem(attributes) {
 }
 
 function removeItem(id, callback) {
-  connection.query('DELETE FROM `todos` WHERE `id`= ?', id, function(err, res) {
+  connection.query('DELETE FROM `todo` WHERE `todo_id`= ?', id, function(err, res) {
       if (err) throw err;
-      var removed = {'id': id}
-      callback(removed);
+      console.log(res);
+      callback(res);
     });
 }
 
