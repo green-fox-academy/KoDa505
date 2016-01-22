@@ -15,6 +15,7 @@ module.exports = {
   add: addItem,
   remove: removeItem,
   all: allItems,
+  update: updateItem
 };
 
 function addItem(attributes) {
@@ -36,6 +37,13 @@ function getItem(attributes) {
   connection.query('SELECT * FROM todo', function(err, result) {
     if (err) throw err;
     console.log(result);
+  });
+}
+
+function updateItem(id, cb) {
+  connection.query('UPDATE todo SET completed = \'true\' WHERE todo_id = ?', id, function(err, result) {
+    if (err) throw err;
+    cb(result);
   });
 }
 

@@ -39,7 +39,15 @@ app.delete("/todos/:id", function (req, res) {
   items.remove(req.params.id, function(result) {
     res.json(result);
   });
+});
 
+
+// PUT /todos/1 => edit a todo item
+// It accepts the same body as the POST /todos request.
+app.put("/todos/:id", function (req, res) {
+  items.update(req.params.id, function(result) {
+    res.json(result);
+  });
 });
 
 // POST /todos => create a new todo item
@@ -60,15 +68,6 @@ app.post("/todos", function (req, res) {
 // GET /todos/1 => gets a single todo item
 app.get("/todos/:id", function (req, res) {
   findItem(req, res, function (item) { res.json(item); });
-});
-
-// PUT /todos/1 => edit a todo item
-// It accepts the same body as the POST /todos request.
-app.put("/todos/:id", function (req, res) {
-  findItem(req, res, function (item) {
-    item.update(req.body);
-    res.json(item);
-  });
 });
 
 
